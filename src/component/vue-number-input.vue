@@ -8,10 +8,10 @@
 
 <script type="text/ecmascript-6">
     export default {
+        name: 'vue-number-input',
         mounted() {
             this.handleChange(this.value);
         },
-        name: 'vue-pattern-input',
         props: {
             value: {
                 required: true,
@@ -23,6 +23,11 @@
             },
             max: {
                 type: Number
+            },
+
+            numberType: {
+                type: String,
+                default: 'integer'
             },
 
             sep: {
@@ -61,10 +66,19 @@
                 return num;
             },
 
+            selectText(el) {
+                const len = this.val.length;
+
+                setTimeout(() => {
+                    el.setSelectionRange(len, len); // 光标移至末尾
+                }, 0);
+            },
+
             updateValue(val) {
                 const value = this.formatValue(val);
 
-                this.val = value;
+                this.val = this.splitNumber(value, this.step, this.sep);
+                this.selectText(this.$refs.input);
                 this.emitInput(value);
             },
 
