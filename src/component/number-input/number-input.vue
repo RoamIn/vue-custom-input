@@ -1,14 +1,14 @@
 <template>
     <input :value="value"
            @input="updateValue($event.target.value)"
-           @change="handleChange($event.target.value)"
+           @blur="handleChange($event.target.value)"
            v-model="val"
            ref="input">
 </template>
 
 <script type="text/ecmascript-6">
     export default {
-        name: 'vue-number-input',
+        name: 'vue-number-input-demo',
         mounted() {
             this.handleChange(this.value);
         },
@@ -48,18 +48,18 @@
         },
         methods: {
             formatValue(val) {
-                const formattedValue = val.toString().replace(/^[0\D]*|\D*/g, '');
+                const formattedValue = val.toString().replace(/^0+(?=\d)|\D*/g, '');
 
                 return formattedValue;
             },
 
             // 限制数值大小
             restrictValue(num) {
-                if (num < this.min) {
+                if (num === '' || parseFloat(num) < this.min) {
                     return this.min;
                 }
 
-                if (num > this.max) {
+                if (parseFloat(num) > this.max) {
                     return this.max;
                 }
 
