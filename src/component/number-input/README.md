@@ -1,6 +1,7 @@
 ## 目录
 
 - [在线演示](#在线演示)
+- [特性](#特性)
 - [参数说明](#参数说明)
 - [代码示例](#代码示例)
 - [事件](#事件)
@@ -11,6 +12,13 @@
 请点击[链接地址](http://htmlpreview.github.io/?https://github.com/RoamIn/vue-custom-input/blob/master/view/number-input-demo.html)
 
 ![demo.gif](../../img/number-input-demo.gif)
+
+## 特性
+
+> 目前仅支持自然数
+
+- 可以限制输入数值的范围大小
+- 可以进行千分位（或万分位的分隔，分隔位数可自定义），目前不可取消分隔
 
 ## 参数说明
 
