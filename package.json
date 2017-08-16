@@ -2,7 +2,7 @@
   "name": "vue-custom-input",
   "version": "0.0.1",
   "description": "A Vue2.0 Component for limiting user input",
-  "main": "src/component/vue-custom-input.vue",
+  "main": "src/component/",
   "scripts": {
     "dev": "node build/dev-server.js",
     "build": "node build/build.js",
