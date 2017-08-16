@@ -1,6 +1,12 @@
-# ct-adc-custom-input
+# vue-custom-input
 
 > 基于 Vue2.0 的输入框定制化
+
+- number-input
+    - 1000 -> 1,000
+    - 0~1000, -1 -> 0; 10001 -> 1000
+- phone-input
+    - 18288888888 -> 182-8888-8888
 
 ## 目录
 
@@ -33,5 +39,5 @@ For detailed explanation on how things work, checkout the [guide](http://vuejs-t
 
 ## 在线演示
 
-- [number-input](http://htmlpreview.github.io/?https://github.com/ct-adc/ct-adc-custom-input/blob/master/view/number-input-demo.html) ![demo.gif](src/img/number-input-demo.gif)
+- [number-input](http://htmlpreview.github.io/?https://github.com/RoamIn/vue-custom-input/blob/master/view/number-input-demo.html) ![demo.gif](src/img/number-input-demo.gif)
 - phone-input
